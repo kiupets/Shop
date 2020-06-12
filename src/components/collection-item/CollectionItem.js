@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react'
 import './collection-item.styles.scss'
+import CustomButton from '../custom-button/CustomButton'
+import { Context } from '../../context/renderToogleContext'
 
-const CollectionItem = ({id, name, price, imageUrl}) => {
+const CollectionItem = ({ item }) => {
+  const { id, name, price, imageUrl } = item
+  const {state, addItems } = useContext(Context)
+console.log(state)
+
   return (
     <div className="collection-item">
       <div
@@ -14,9 +20,15 @@ const CollectionItem = ({id, name, price, imageUrl}) => {
         <span className="name">{name}</span>
         <span className="price">{price}</span>
       </div>
-
+      <CustomButton
+        className="custom-button"
+        inverted
+        onClick={() => addItems(item)}
+      >
+        Add To Cart{' '}
+      </CustomButton>
     </div>
-  );
-};
+  )
+}
 
-export default CollectionItem;
+export default CollectionItem

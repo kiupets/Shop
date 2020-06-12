@@ -3,7 +3,7 @@ import SHOP_DATA from './shopData';
 import CollectionPreview from '../../components/colection-preview/CollectionPreview';
 
 const Shop = () => {
-  const [shopData, setShopData] = useState (SHOP_DATA);
+  const [shopData] = useState (SHOP_DATA);
   return (
     <div>
       {shopData.map(({id, ...other}) => {
