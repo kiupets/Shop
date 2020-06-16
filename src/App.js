@@ -5,7 +5,7 @@ import UserWeapper from './components/userWrapper/UserWrapper'
 
 import './App.css'
 
-import Routes from './components/routes/Routes'
+
 function App() {
   return (
     <Provider>

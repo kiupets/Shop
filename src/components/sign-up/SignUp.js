@@ -26,21 +26,7 @@ const SignUp = () => {
       confirmPassword: '',
       displayName: '',
     })
-    // try {
-    //   const { user } = await auth.createUserWithEmailAndPassword(
-    //     email,
-    //     password,
-    //   )
-    // await createUserProfileDoc(user, { displayName })
-    // setState({
-    //   email: '',
-    //   password: '',
-    //   confirmPassword: '',
-    //   displayName: '',
-    // })
-    // } catch (e) {
-    //   console.error(e)
-    // }
+   
   }
 
   return (

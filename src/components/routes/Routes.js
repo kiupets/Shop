@@ -3,7 +3,9 @@ import { Context } from '../../context/userContext'
 import Shop from '../../pages/shopPage/Shop'
 import Home from '../../pages/homePage/Home'
 import Header from '../header/Header'
+
 import SignInSignUp from '../signInSignUp/SignInSignUp'
+import CheckOut from '../../pages/checkout/CheckOut'
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
 
 const Routes = () => {
@@ -21,6 +23,7 @@ const Routes = () => {
           path="/signIn"
           render={() => (currentUser ? <Redirect to="/" /> : <SignInSignUp />)}
         />
+        <Route exact path="/checkOut" component={CheckOut} />
       </Switch>
     </BrowserRouter>
   )

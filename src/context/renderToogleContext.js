@@ -1,5 +1,5 @@
 import createDataContext from './createDataContext'
-import ShopData from '../pages/shopPage/shopData'
+
 import { MSGS } from '../users.types'
 import { addItemsToCart } from '../components/cart/cart.utils'
 
@@ -23,6 +23,8 @@ const renderToogleContext = (state, action) => {
       const { item } = action
       const { cartItems } = state
       return { ...state, cartItems: addItemsToCart(cartItems, item) }
+    default:
+      return { state }
   }
 }
 export const { Context, Provider } = createDataContext(
@@ -32,7 +34,7 @@ export const { Context, Provider } = createDataContext(
     addItems,
   },
   {
-    hidden: false,
+    hidden: true,
     cartItems: [],
   },
 )

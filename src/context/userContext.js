@@ -3,8 +3,7 @@ import { auth, createUserProfileDoc } from '../firebase/firebase.utils'
 // import * as R from 'ramda'
 import { MSGS } from '../users.types'
 
-const setUserState = (dispatch) =>  (currentUser) => {
-  console.log(currentUser)
+const setUserState = (dispatch) => (currentUser) => {
   dispatch({
     type: MSGS.CURRENT_USER_STATE,
     currentUser,
@@ -55,7 +54,7 @@ const userContext = (state, action) => {
         displayName: '',
       }
     case MSGS.CURRENT_USER_STATE: {
-      const {currentUser} = action
+      const { currentUser } = action
       return {
         ...state,
         currentUser,
@@ -71,7 +70,7 @@ export const { Context, Provider } = createDataContext(
   {
     signIn,
     signUp,
-    setUserState
+    setUserState,
   },
   { currentUser: null },
 )

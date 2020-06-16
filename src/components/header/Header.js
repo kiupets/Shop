@@ -7,14 +7,14 @@ import { ReactComponent as Logo } from '../../assets/crown.svg'
 import { auth } from '../../firebase/firebase.utils'
 import CartIcon from '../cart/CartIcon'
 import CartDropDown from '../cart-drop-down/CartDropDown'
+import { hiddenSelector } from '../cart/cart.utils'
 
 const Header = () => {
   const { state } = useContext(Context)
   const { currentUser } = state
   const toggleState = useContext(ToggleContext).state
   const { setToggle } = useContext(ToggleContext)
-
-  const { hidden } = toggleState
+  const hidden = !hiddenSelector(toggleState)
 
   return (
     <div className="header">

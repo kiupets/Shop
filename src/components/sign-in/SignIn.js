@@ -13,13 +13,6 @@ const SignIn = () => {
   const handleSubmit =  (e) => {
     e.preventDefault()
     signIn(email,password)
-    // try {
-    //   await auth.signInWithEmailAndPassword(email, password)
-    //   setEmail('')
-    //   setPassword('')
-    // } catch (e) {
-    //   console.error(e)
-    // }
 
   }
 

@@ -4,9 +4,9 @@ import CustomButton from '../custom-button/CustomButton'
 import { Context } from '../../context/renderToogleContext'
 
 const CollectionItem = ({ item }) => {
-  const { id, name, price, imageUrl } = item
+  const {  name, price, imageUrl } = item
   const {state, addItems } = useContext(Context)
-console.log(state)
+
 
   return (
     <div className="collection-item">
