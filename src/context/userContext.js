@@ -1,7 +1,7 @@
 import createDataContext from './createDataContext'
 import { auth, createUserProfileDoc } from '../firebase/firebase.utils'
 // import * as R from 'ramda'
-import { MSGS } from '../users.types'
+import { MSGS } from './users.types'
 
 const setUserState = (dispatch) => (currentUser) => {
   dispatch({
